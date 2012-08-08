@@ -33,5 +33,6 @@ grails.project.dependency.resolution = {
         ":release:1.0.0") {
       export = false
     }
+    compile(":jquery:1.7.2", ":resources:1.1.6")
   }
 }
