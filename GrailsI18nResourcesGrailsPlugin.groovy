@@ -6,15 +6,18 @@ class GrailsI18nResourcesGrailsPlugin {
   // the other plugins this plugin depends on
   def dependsOn = [:]
   // resources that are excluded from plugin packaging
-  def pluginExcludes = ["grails-app/views/error.gsp"]
+  def pluginExcludes = [
+      "grails-app/views/error.gsp",
+      "grails-app/i18n/*"
+  ]
 
   // TODO Fill in these fields
   def title = "Grails I18n Resources Plugin"
   // Headline display name of the plugin
-  def author = "Your name"
+  def author = "Rahul Somasunderam"
   def authorEmail = ""
   def description = '''\
-Brief summary/description of the plugin.
+Serves up i18n bundle to javascript
 '''
 
   // URL to the plugin's documentation
@@ -29,13 +32,13 @@ Brief summary/description of the plugin.
   //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
 
   // Any additional developers beyond the author specified above.
-  //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
+  def developers = [ [ name: "Rahul Somasunderam", email: "rahul.som@gmail.com" ]]
 
   // Location of the plugin's issue tracker.
-  //    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+  def issueManagement = [ system: "GitHub", url: "http://github.com/rahulsom/grails-i18n-resources/issues" ]
 
   // Online location of the plugin's browseable source code.
-  //    def scm = [ url: "http://svn.grails-plugins.codehaus.org/browse/grails-plugins/" ]
+  def scm = [ url: "http://github.com/rahulsom/grails-i18n-resources/" ]
 
   def doWithWebDescriptor = { xml ->
     // TODO Implement additions to web.xml (optional), this event occurs before
