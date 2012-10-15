@@ -5,7 +5,7 @@ import javax.servlet.ServletContext
 class I18nController {
 
   def index() {
-    log.fatal params.id
+    log.debug params.id
 
     def f = new File("grails-app/i18n/${params.id}")
     InputStream stream = null
@@ -19,11 +19,11 @@ class I18nController {
       }
     }
     if (stream) {
-      log.fatal "Streaming"
+      log.debug "Streaming"
       render stream.text
     } else {
-      log.fatal "Not found"
-      response.sendError(404)
+      log.debug "Not found"
+      render '#Message bundle not found'
     }
   }
 }
