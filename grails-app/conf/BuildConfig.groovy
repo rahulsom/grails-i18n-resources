@@ -16,12 +16,12 @@ grails.project.dependency.resolution = {
     grailsCentral()
     // uncomment the below to enable remote dependency resolution
     // from public Maven repositories
-    //mavenCentral()
+    mavenCentral()
     //mavenLocal()
-    //mavenRepo "http://snapshots.repository.codehaus.org"
-    //mavenRepo "http://repository.codehaus.org"
-    //mavenRepo "http://download.java.net/maven/2/"
-    //mavenRepo "http://repository.jboss.com/maven2/"
+    mavenRepo "http://snapshots.repository.codehaus.org"
+    mavenRepo "http://repository.codehaus.org"
+    mavenRepo "http://download.java.net/maven/2/"
+    mavenRepo "http://repository.jboss.com/maven2/"
   }
   dependencies {
     // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
@@ -30,11 +30,12 @@ grails.project.dependency.resolution = {
   }
 
   plugins {
-    build(":tomcat:$grailsVersion",
-        ":release:1.0.0") {
-      export = false
+    build ":tomcat:7.0.54"
+    runtime(":hibernate:3.6.10.17"){ // or ":hibernate:3.6.10.16"
+      excludes "ehcache-core"
     }
-    compile(":jquery:1.7.2", ":resources:1.1.6")
+    compile ":asset-pipeline:1.9.6"
+    compile ":jquery:1.11.1" //, ":resources:1.2.8")
     build ":release:2.2.1"
   }
 }
