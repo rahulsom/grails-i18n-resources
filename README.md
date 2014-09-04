@@ -8,8 +8,16 @@ Usage
 
 1. In your plugins section of `BuildConfig.groovy` add this
 
+For use with the (now deprecated) resources plugin,
+
 ```
     compile ":grails-i18n-resources:0.1"
+```
+
+For use with the asset-pipeline plugin,
+
+```
+    compile ":grails-i18n-resources:0.2"
 ```
 
 2. In your `*Resources.groovy`, add dependency `i18n` to modules that need i18n.
@@ -21,7 +29,7 @@ $.i18n.properties({
   path: '<g:resource dir="i18n/"/>',
   mode: 'map',
   callback: function() {
-    // your code here 
+    // your code here
   },
   cache: true
 });
