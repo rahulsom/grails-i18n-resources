@@ -5,3 +5,4 @@ web-app/WEB-INF/tld/fmt.tld
 *.iml
 plugin.xml
 grails-grails*.zip
+grails-grails*.zip.sha1

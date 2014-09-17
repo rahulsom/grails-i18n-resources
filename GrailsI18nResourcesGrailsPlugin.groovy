@@ -33,7 +33,10 @@ Serves up i18n bundle to javascript
   //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
 
   // Any additional developers beyond the author specified above.
-  def developers = [ [ name: "Rahul Somasunderam", email: "rahul.som@gmail.com" ]]
+  def developers = [
+    [ name: "Rahul Somasunderam", email: "rahul.som@gmail.com" ],
+    [ name: "Dave Klein", email: "kickingdownthecobblestones@gmail.com" ],
+  ]
 
   // Location of the plugin's issue tracker.
   def issueManagement = [ system: "GitHub", url: "http://github.com/rahulsom/grails-i18n-resources/issues" ]
